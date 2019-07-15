@@ -1,0 +1,274 @@
+<doc>
+ <str name="id">
+  biblio-1002604
+ </str>
+ <arr name="cc">
+  <str>
+   AR1.1
+  </str>
+ </arr>
+ <str name="bvs">
+  regional
+ </str>
+ <arr name="db">
+  <str>
+   LILACS
+  </str>
+ </arr>
+ <arr name="instance">
+  <str>
+   regional
+  </str>
+  <str>
+   ghl
+  </str>
+  <str>
+   fronteriza
+  </str>
+  <str>
+   bvscolombia
+  </str>
+  <str>
+   bvsespana
+  </str>
+  <str>
+   carpha
+  </str>
+  <str>
+   paraguay
+  </str>
+  <str>
+   panama
+  </str>
+  <str>
+   conass
+  </str>
+  <str>
+   regional
+  </str>
+  <str>
+   ghl
+  </str>
+  <str>
+   fronteriza
+  </str>
+  <str>
+   bvscolombia
+  </str>
+  <str>
+   bvsespana
+  </str>
+  <str>
+   carpha
+  </str>
+  <str>
+   paraguay
+  </str>
+  <str>
+   panama
+  </str>
+  <str>
+   conass
+  </str>
+ </arr>
+ <arr name="type">
+  <str>
+   article
+  </str>
+ </arr>
+ <str name="nivel_tratamento">
+  as
+ </str>
+ <arr name="ur">
+  <str>
+   http://www.scielo.org.ar/scielo.php?script=sci_arttext&amp;pid=S0025-76802019000200010
+  </str>
+ </arr>
+ <arr name="au">
+  <str>
+   Pin Arboledas, Gonzalo
+  </str>
+ </arr>
+ <arr name="afiliacao_autor">
+  <str>
+   Pin Arboledas, Gonzalo; Hospital Quirónsalud. Unidad de Pediatría Integral y Sueño. Valencia.
+  </str>
+ </arr>
+ <arr name="af">
+  <str>
+   Hospital Quirónsalud
+  </str>
+  <str>
+   Unidad de Pediatría Integral y Sueño
+  </str>
+  <str>
+   Valencia
+  </str>
+ </arr>
+ <arr name="ti_es">
+  <str>
+   El sueño del niño con trastornos del neurodesarrollo
+  </str>
+ </arr>
+ <arr name="ti">
+  <str>
+   El sueño del niño con trastornos del neurodesarrollo
+  </str>
+ </arr>
+ <arr name="pg">
+  <str>
+   44 - 50
+  </str>
+ </arr>
+ <arr name="fo">
+  <str>
+   Medicina (B.Aires);79(1,supl.1): 44-50, abr. 2019. ilus, tab
+  </str>
+ </arr>
+ <arr name="ta">
+  <str>
+   Medicina (B.Aires)
+  </str>
+  <str>
+   Medicina (Buenos Aires)
+  </str>
+  <str>
+   Medicina (Buenos Aires. En línea)
+  </str>
+  <str>
+   Medicina (B Aires)
+  </str>
+ </arr>
+ <arr name="is">
+  <str>
+   0025-7680
+  </str>
+ </arr>
+ <arr name="vi">
+  <str>
+   79
+  </str>
+ </arr>
+ <arr name="ip">
+  <str>
+   1,supl.1
+  </str>
+ </arr>
+ <arr name="fa">
+  <str>
+   1,supl.1
+  </str>
+ </arr>
+ <arr name="la">
+  <str>
+   es
+  </str>
+ </arr>
+ <arr name="cp">
+  <str>
+   AR
+  </str>
+  <str>
+   ARGENTINA
+  </str>
+  <str>
+   ARGENTINA
+  </str>
+  <str>
+   ARGENTINA
+  </str>
+ </arr>
+ <str name="da">
+  201904
+ </str>
+ <arr name="ab_es">
+  <str>
+   El sueño adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un sueño de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de atención, memoria y conducta de los niños. La preocupación sobre la alta prevalencia de los problemas del sueño es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de trastornos del neurodesarrollo; estos niños a menudo tienen dificultades de inicio y mantenimiento del sueño y despertares nocturnos frecuentes que afectan a sus problemas de conducta. El propósito de este escrito es revisar el estado del arte de los problemas del sueño en los niños con trastornos del neurodesarrollo. En este punto, es importante tener en cuenta el ritmo circadiano, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el ambiente diurno y nocturno coordinando estos mecanismos durante los ciclos luz/oscuridad, sueño/vigilia, frío/calor, ingesta/ayuno, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del sueño son un factor condicionante de la evolución y calidad de vida de los niños con trastornos del neurodesarrollo, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la terapéutica.
+  </str>
+ </arr>
+ <arr name="ab">
+  <str>
+   El sueño adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un sueño de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de atención, memoria y conducta de los niños. La preocupación sobre la alta prevalencia de los problemas del sueño es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de trastornos del neurodesarrollo; estos niños a menudo tienen dificultades de inicio y mantenimiento del sueño y despertares nocturnos frecuentes que afectan a sus problemas de conducta. El propósito de este escrito es revisar el estado del arte de los problemas del sueño en los niños con trastornos del neurodesarrollo. En este punto, es importante tener en cuenta el ritmo circadiano, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el ambiente diurno y nocturno coordinando estos mecanismos durante los ciclos luz/oscuridad, sueño/vigilia, frío/calor, ingesta/ayuno, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del sueño son un factor condicionante de la evolución y calidad de vida de los niños con trastornos del neurodesarrollo, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la terapéutica.
+  </str>
+  <str>
+   Adequate sleep is of critical need for a typical synaptic development and brain maturation, a poor quality sleep can have detrimental effects on children's' cognitive attention, memory, mood regulation, and behavior functions. Great concern has been voiced out regarding the high prevalence of poor sleep in children worldwide, the effects of poor sleep may be even more pronounced in children with neurodevelopmental disorders; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong association with daytime behavior problems. The purpose of this article is to provide an overview of the state of the science of sleep in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and metabolism. The circadian clock interacts with the diurnal and nocturnal environment that also drives transcription and metabolism during light/dark, sleep/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the sleep problems are a conditioning factor in the evolution and quality of life of children with neurodevelopmental disorders that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
+  </str>
+ </arr>
+ <arr name="mark_ab_es">
+  <str>
+   El &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de &lt;a class="decs" id="001294"&gt;atención&lt;/a&gt;, &lt;a class="decs" id="008738"&gt;memoria&lt;/a&gt; y &lt;a class="decs" id="001538"&gt;conducta&lt;/a&gt; de los niños. La preocupación sobre la alta &lt;a class="decs" id="028584"&gt;prevalencia&lt;/a&gt; de los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;; estos niños a menudo tienen dificultades de inicio y &lt;a class="decs" id="008456"&gt;mantenimiento&lt;/a&gt; del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; y despertares nocturnos frecuentes que afectan a sus problemas de &lt;a class="decs" id="001538"&gt;conducta&lt;/a&gt;. El propósito de este escrito es revisar el &lt;a class="decs" id="036438"&gt;estado&lt;/a&gt; del &lt;a class="decs" id="001160"&gt;arte&lt;/a&gt; de los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; en los niños con &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;. En este punto, es importante tener en cuenta el &lt;a class="decs" id="002966"&gt;ritmo circadiano&lt;/a&gt;, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el &lt;a class="decs" id="004858"&gt;ambiente&lt;/a&gt; diurno y nocturno coordinando estos mecanismos durante los ciclos luz/&lt;a class="decs" id="003643"&gt;oscuridad&lt;/a&gt;, &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt;/&lt;a class="decs" id="015252"&gt;vigilia&lt;/a&gt;, &lt;a class="decs" id="003111"&gt;frío&lt;/a&gt;/&lt;a class="decs" id="006508"&gt;calor&lt;/a&gt;, ingesta/&lt;a class="decs" id="029390"&gt;ayuno&lt;/a&gt;, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; son un factor condicionante de la evolución y &lt;a class="decs" id="012225"&gt;calidad de vida&lt;/a&gt; de los niños con &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la &lt;a class="decs" id="014190"&gt;terapéutica&lt;/a&gt;.
+  </str>
+ </arr>
+ <arr name="ab_en">
+  <str>
+   Adequate sleep is of critical need for a typical synaptic development and brain maturation, a poor quality sleep can have detrimental effects on children's' cognitive attention, memory, mood regulation, and behavior functions. Great concern has been voiced out regarding the high prevalence of poor sleep in children worldwide, the effects of poor sleep may be even more pronounced in children with neurodevelopmental disorders; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong association with daytime behavior problems. The purpose of this article is to provide an overview of the state of the science of sleep in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and metabolism. The circadian clock interacts with the diurnal and nocturnal environment that also drives transcription and metabolism during light/dark, sleep/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the sleep problems are a conditioning factor in the evolution and quality of life of children with neurodevelopmental disorders that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
+  </str>
+ </arr>
+ <arr name="mark_ab_en">
+  <str>
+   Adequate &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; is of critical need for a typical synaptic development and &lt;a class="decs" id="001947"&gt;brain&lt;/a&gt; maturation, a poor quality &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; can have detrimental effects on children's' cognitive &lt;a class="decs" id="001294"&gt;attention&lt;/a&gt;, &lt;a class="decs" id="008738"&gt;memory&lt;/a&gt;, mood regulation, and &lt;a class="decs" id="001538"&gt;behavior&lt;/a&gt; functions. Great concern has been voiced out regarding the high &lt;a class="decs" id="028584"&gt;prevalence&lt;/a&gt; of poor &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; in children worldwide, the effects of poor &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; may be even more pronounced in children with &lt;a class="decs" id="056095"&gt;neurodevelopmental disorders&lt;/a&gt;; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong &lt;a class="decs" id="001252"&gt;association&lt;/a&gt; with daytime &lt;a class="decs" id="001538"&gt;behavior&lt;/a&gt; problems. The purpose of this article is to provide an overview of the &lt;a class="decs" id="036438"&gt;state&lt;/a&gt; of the &lt;a class="decs" id="012967"&gt;science&lt;/a&gt; of &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and &lt;a class="decs" id="008837"&gt;metabolism&lt;/a&gt;. The circadian clock interacts with the diurnal and nocturnal &lt;a class="decs" id="004858"&gt;environment&lt;/a&gt; that also drives transcription and &lt;a class="decs" id="008837"&gt;metabolism&lt;/a&gt; during &lt;a class="decs" id="008203"&gt;light&lt;/a&gt;/dark, &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt;/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; problems are a conditioning factor in the evolution and &lt;a class="decs" id="012225"&gt;quality of life&lt;/a&gt; of children with &lt;a class="decs" id="056095"&gt;neurodevelopmental disorders&lt;/a&gt; that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
+  </str>
+ </arr>
+ <arr name="carpha_language">
+  <str>
+   espanhol
+  </str>
+ </arr>
+ <arr name="services">
+  <str>
+   LXP
+  </str>
+  <str>
+   SCAD
+  </str>
+ </arr>
+ <float name="weight">
+  45.0
+ </float>
+ <str name="entry_date">
+  20190426
+ </str>
+ <str name="update_date">
+  20190626
+ </str>
+ <arr name="pais_afiliacao">
+  <str>
+   ^iVenezuela^eVenezuela^pVenezuela^fVenezuela
+  </str>
+ </arr>
+ <arr name="kw">
+  <str>
+   Autism spectrum disorders
+  </str>
+  <str>
+   Biological rhythms
+  </str>
+  <str>
+   Biorritmos
+  </str>
+  <str>
+   Ciclo circadiano
+  </str>
+  <str>
+   Circadian cycle
+  </str>
+  <str>
+   Insomnia
+  </str>
+  <str>
+   Insomnio
+  </str>
+  <str>
+   Melatonin
+  </str>
+  <str>
+   Melatonina
+  </str>
+  <str>
+   Trastornos del espectro autista
+  </str>
+ </arr>
+ <long name="_version_">
+  1639025509516967936
+ </long>
+</doc>
