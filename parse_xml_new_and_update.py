@@ -102,6 +102,9 @@ def xml_to_dictionary(document_xml):
                                 type_error = 'Extract field information from single doc',
                                 detail_error = code,
                                 exception_str = str(e)))
+                                
+    document_dict['_id'] = document_dict.pop('id')
+    document_dict['parsing_date'] = datetime.utcnow()
     return document_dict
 
 def parse_file(path_to_file,mode=None):
@@ -114,9 +117,8 @@ def parse_file(path_to_file,mode=None):
         try:
             for i, document_xml in enumerate(documents):
                 document_dict = xml_to_dictionary(document_xml)
-                document_dict['_id'] = document_dict.pop('id')
                 document_dict['file'] = path_to_file
-                document_dict['parsing_date'] = datetime.utcnow()
+
                 if mode == "compare":
                     collection_None_Indexed_t2.insert_one(document_dict)
                 else:
@@ -139,26 +141,34 @@ def parse_file(path_to_file,mode=None):
 
 def process_dir_t2():
     folder_to_save = './crawled_no_indexed/' 
-    if os.path.isdir(folder_to_save):
-        os.remove(folder_to_save)
-    Crawl_Records.get_records("ibecs")
-    Crawl_Records.get_records("lilacs")
-    parse_file(folder_to_save,"compare")
+    #if os.path.isdir(folder_to_save):
+    #    os.remove(folder_to_save)
+    #Crawl_Records.get_records("none_index_ibecs")
+    #Crawl_Records.get_records("none_index_lilacs")
+    files = glob.glob(folder_to_save+'*.xml')
+    for file in files:
+        print("file",file)
+        parse_file(file,"compare")
 
 def document_compare():
     process_dir_t2()
 
     all_ids_cursor_t2 =  collection_None_Indexed_t2.find({},{"_id":1})
     all_ids_t2 = []
-    for item in all_ids_cursor_t2():
+    for item in all_ids_cursor_t2:
         all_ids_t2.append(item['_id'])
 
     all_ids_cursor_t1 =  collection_None_Indexed_t1.find({},{"_id":1})
     all_ids_t1 = []
-    for item in all_ids_cursor_t1():
+    for item in all_ids_cursor_t1:
         all_ids_t1.append(item['_id'])
 
+    print("t1:",len(all_ids_t1))
+    print("t2:",len(all_ids_t2))
+    i = 1
     for id_t2 in all_ids_t2:
+        print("t1",i)
+        i += 1
         document_t2 = collection_None_Indexed_t2.find_one({"_id":id_t2})
         document_t1 = collection_None_Indexed_t1.find_one({'_id':id_t2})
         if document_t1 is None:
@@ -169,11 +179,13 @@ def document_compare():
             except (TypeError, AttributeError) as e:
                 errors.insert_one(dict(date_time = datetime.utcnow(),
                     doc_id = id_t2,
-                    type_error = 'While saving new none indexed document into mongo',
+                    type_error = 'Save new none indexed document into mongo',
                     detail_error = id_t2,
-                    exception_str = str(e)))
-    
+                    exception_str = str(e)))       
+    i = 1
     for id_t1 in all_ids_t1:
+        print("t1",i)
+        i += 1
         document_t1 = collection_None_Indexed_t1.find_one({'_id':id_t1})     
         document_t2 = collection_None_Indexed_t2.find_one({'_id':id_t1})
         if document_t2 is None:
@@ -187,6 +199,7 @@ def document_compare():
             url, xml= download_document(doc_id_t1)
             bsObj = BeautifulSoup(xml,features='lxml')
             document_xml = bsObj.find('doc')
+            
             if document_xml is not None:
                 try:
                     document_dict = xml_to_dictionary(document_xml)
@@ -197,15 +210,13 @@ def document_compare():
                                                     'parsing_date': datetime.utcnow()}
                                                     })
                     collection_None_Indexed_t1.delete_one({'_id': document_dict['_id']})
-                    save_to_mongo_updated_info(document_dict['_id'],'new',document_dict['db'])                                              
+                    save_to_mongo_updated_info(document_dict['_id'],'update',document_dict['db'])
                 except Exception as e:
                     errors.insert_one(dict(date_time=datetime.utcnow(),
                                             doc_id=document_dict['_id'],
                                             type_error='Update information from single <doc>',
                                             detail_error=url,
                                             exception_str=str(e)))                
-            else:
-                print(f"Error: Couldn't find documento by id: {document_t1['_id']}")             
 
 def process_dir_t1(path_to_dir):
     """

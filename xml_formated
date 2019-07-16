@@ -1,10 +1,10 @@
 <doc>
  <str name="id">
-  biblio-1002604
+  biblio-1003498
  </str>
  <arr name="cc">
   <str>
-   AR1.1
+   BR1.1
   </str>
  </arr>
  <str name="bvs">
@@ -35,6 +35,9 @@
    carpha
   </str>
   <str>
+   mtc
+  </str>
+  <str>
    paraguay
   </str>
   <str>
@@ -62,6 +65,9 @@
    carpha
   </str>
   <str>
+   mtc
+  </str>
+  <str>
    paraguay
   </str>
   <str>
@@ -81,137 +87,172 @@
  </str>
  <arr name="ur">
   <str>
-   http://www.scielo.org.ar/scielo.php?script=sci_arttext&amp;pid=S0025-76802019000200010
+   http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S0102-695X2019000200137
   </str>
  </arr>
  <arr name="au">
   <str>
-   Pin Arboledas, Gonzalo
+   Michetti, Karina Mariel
+  </str>
+  <str>
+   Pérez Cuadra, Vanesa
+  </str>
+  <str>
+   Cambi, Viviana Nora
   </str>
  </arr>
  <arr name="afiliacao_autor">
   <str>
-   Pin Arboledas, Gonzalo; Hospital Quirónsalud. Unidad de Pediatría Integral y Sueño. Valencia.
+   Michetti, Karina Mariel; Universidad Nacional del Sur. Laboratorio de Biología de Plantas Vasculares. Departamento de Biología, Bioquímica y Farmacia. Bahía Blanca. AR
+  </str>
+  <str>
+   Pérez Cuadra, Vanesa; Universidad Nacional del Sur. Laboratorio de Biología de Plantas Vasculares. Departamento de Biología, Bioquímica y Farmacia. Bahía Blanca. AR
+  </str>
+  <str>
+   Cambi, Viviana Nora; Universidad Nacional del Sur. Laboratorio de Biología de Plantas Vasculares. Departamento de Biología, Bioquímica y Farmacia. Bahía Blanca. AR
   </str>
  </arr>
  <arr name="af">
   <str>
-   Hospital Quirónsalud
+   Universidad Nacional del Sur
   </str>
   <str>
-   Unidad de Pediatría Integral y Sueño
+   Universidad Nacional del Sur
   </str>
   <str>
-   Valencia
+   Universidad Nacional del Sur
+  </str>
+  <str>
+   Laboratorio de Biología de Plantas Vasculares
+  </str>
+  <str>
+   Laboratorio de Biología de Plantas Vasculares
+  </str>
+  <str>
+   Laboratorio de Biología de Plantas Vasculares
+  </str>
+  <str>
+   Departamento de Biología, Bioquímica y Farmacia
+  </str>
+  <str>
+   Departamento de Biología, Bioquímica y Farmacia
+  </str>
+  <str>
+   Departamento de Biología, Bioquímica y Farmacia
+  </str>
+  <str>
+   Bahía Blanca
+  </str>
+  <str>
+   Bahía Blanca
+  </str>
+  <str>
+   Bahía Blanca
   </str>
  </arr>
- <arr name="ti_es">
+ <arr name="ti_en">
   <str>
-   El sueño del niño con trastornos del neurodesarrollo
+   Botanical quality control of digestive tisanes commercialized in an urban area (Bahía Blanca, Argentina)
   </str>
  </arr>
  <arr name="ti">
   <str>
-   El sueño del niño con trastornos del neurodesarrollo
+   Botanical quality control of digestive tisanes commercialized in an urban area (Bahía Blanca, Argentina)
   </str>
  </arr>
  <arr name="pg">
   <str>
-   44 - 50
+   137 - 146
   </str>
  </arr>
  <arr name="fo">
   <str>
-   Medicina (B.Aires);79(1,supl.1): 44-50, abr. 2019. ilus, tab
+   Rev. bras. farmacogn;29(2): 137-146, Mar.-Apr. 2019. tab, graf
   </str>
  </arr>
  <arr name="ta">
   <str>
-   Medicina (B.Aires)
+   Rev. bras. farmacogn
   </str>
   <str>
-   Medicina (Buenos Aires)
+   Revista brasileira de farmacognosia (Impresso)
   </str>
   <str>
-   Medicina (Buenos Aires. En línea)
+   Brazilian journal of pharmacognosy
   </str>
   <str>
-   Medicina (B Aires)
+   Braz. j. pharmacogn.
+  </str>
+  <str>
+   Rev. bras. farmacogn. (Online)
   </str>
  </arr>
  <arr name="is">
   <str>
-   0025-7680
+   0102-695X
   </str>
  </arr>
  <arr name="vi">
   <str>
-   79
+   29
   </str>
  </arr>
  <arr name="ip">
   <str>
-   1,supl.1
+   2
   </str>
  </arr>
  <arr name="fa">
   <str>
-   1,supl.1
+   2
   </str>
  </arr>
  <arr name="la">
   <str>
-   es
+   en
   </str>
  </arr>
  <arr name="cp">
   <str>
-   AR
+   BR
   </str>
   <str>
-   ARGENTINA
+   BRASIL
   </str>
   <str>
-   ARGENTINA
+   BRAZIL
   </str>
   <str>
-   ARGENTINA
+   BRASIL
+  </str>
+  <str>
+   BRESIL
+  </str>
+  <str>
+   BRASILE
   </str>
  </arr>
  <str name="da">
   201904
  </str>
- <arr name="ab_es">
+ <arr name="ab_en">
   <str>
-   El sueño adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un sueño de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de atención, memoria y conducta de los niños. La preocupación sobre la alta prevalencia de los problemas del sueño es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de trastornos del neurodesarrollo; estos niños a menudo tienen dificultades de inicio y mantenimiento del sueño y despertares nocturnos frecuentes que afectan a sus problemas de conducta. El propósito de este escrito es revisar el estado del arte de los problemas del sueño en los niños con trastornos del neurodesarrollo. En este punto, es importante tener en cuenta el ritmo circadiano, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el ambiente diurno y nocturno coordinando estos mecanismos durante los ciclos luz/oscuridad, sueño/vigilia, frío/calor, ingesta/ayuno, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del sueño son un factor condicionante de la evolución y calidad de vida de los niños con trastornos del neurodesarrollo, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la terapéutica.
+   ABSTRACT Digestive herbal teas in the form of monoherbal infusions or in mixtures are the most commonly used form of phytotherapy in Bahía Blanca (Argentina). This practice is based on family tradition reinforced by current trends reverting to the ingestion of natural products. The objective of this work was to analyze the botanical quality of the digestive mixtures sold in Bahía Blanca as fine cut mixtures (in tea bags) and thick cut mixtures (fragmented herbs). Samples of seven mixtures sold in the form of tea bags and four as bags of fragmented herbs were studied under stereoscopic and optical microscopes and micrographic studies were carried out following conventional protocols. Observed characteristics were compared with those in the reference bibliography for verified genuine monoherbs. In the studied products a total of 21 different species were found. There was total concordance between the species declared on the label and those identified in the samples in six of the mixtures in the form of tea bags and in only one of the bags of fragmented herbs. Adulterations were found in four of the samples analyzed (one in a tea bag and three in the fragmented mixtures). The labels on only two of the tea bag samples presented complete and correct information; in the remaining samples irregularities were found related to: the taxonomic identification of the species, the absence of a lot number, date of expiry, the plant parts used and proportions of the herbs etc. The findings underline the great importance of quality controls as a tool to protect the rights of phytotherapy consumers.
   </str>
  </arr>
  <arr name="ab">
   <str>
-   El sueño adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un sueño de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de atención, memoria y conducta de los niños. La preocupación sobre la alta prevalencia de los problemas del sueño es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de trastornos del neurodesarrollo; estos niños a menudo tienen dificultades de inicio y mantenimiento del sueño y despertares nocturnos frecuentes que afectan a sus problemas de conducta. El propósito de este escrito es revisar el estado del arte de los problemas del sueño en los niños con trastornos del neurodesarrollo. En este punto, es importante tener en cuenta el ritmo circadiano, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el ambiente diurno y nocturno coordinando estos mecanismos durante los ciclos luz/oscuridad, sueño/vigilia, frío/calor, ingesta/ayuno, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del sueño son un factor condicionante de la evolución y calidad de vida de los niños con trastornos del neurodesarrollo, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la terapéutica.
-  </str>
-  <str>
-   Adequate sleep is of critical need for a typical synaptic development and brain maturation, a poor quality sleep can have detrimental effects on children's' cognitive attention, memory, mood regulation, and behavior functions. Great concern has been voiced out regarding the high prevalence of poor sleep in children worldwide, the effects of poor sleep may be even more pronounced in children with neurodevelopmental disorders; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong association with daytime behavior problems. The purpose of this article is to provide an overview of the state of the science of sleep in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and metabolism. The circadian clock interacts with the diurnal and nocturnal environment that also drives transcription and metabolism during light/dark, sleep/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the sleep problems are a conditioning factor in the evolution and quality of life of children with neurodevelopmental disorders that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
-  </str>
- </arr>
- <arr name="mark_ab_es">
-  <str>
-   El &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; adecuado es necesario para el desarrollo sináptico y la maduración cerebral, un &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; de mala calidad tiene efectos perjudiciales en las funciones cognitivas, de &lt;a class="decs" id="001294"&gt;atención&lt;/a&gt;, &lt;a class="decs" id="008738"&gt;memoria&lt;/a&gt; y &lt;a class="decs" id="001538"&gt;conducta&lt;/a&gt; de los niños. La preocupación sobre la alta &lt;a class="decs" id="028584"&gt;prevalencia&lt;/a&gt; de los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; es amplia en todo el mundo; las consecuencias de estos problemas son incluso más importantes en los niños portadores de &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;; estos niños a menudo tienen dificultades de inicio y &lt;a class="decs" id="008456"&gt;mantenimiento&lt;/a&gt; del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; y despertares nocturnos frecuentes que afectan a sus problemas de &lt;a class="decs" id="001538"&gt;conducta&lt;/a&gt;. El propósito de este escrito es revisar el &lt;a class="decs" id="036438"&gt;estado&lt;/a&gt; del &lt;a class="decs" id="001160"&gt;arte&lt;/a&gt; de los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; en los niños con &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;. En este punto, es importante tener en cuenta el &lt;a class="decs" id="002966"&gt;ritmo circadiano&lt;/a&gt;, un reloj que genéticamente dirige los ritmos celulares de transcripción, traslación y metabolismos. Este reloj se combina con el &lt;a class="decs" id="004858"&gt;ambiente&lt;/a&gt; diurno y nocturno coordinando estos mecanismos durante los ciclos luz/&lt;a class="decs" id="003643"&gt;oscuridad&lt;/a&gt;, &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt;/&lt;a class="decs" id="015252"&gt;vigilia&lt;/a&gt;, &lt;a class="decs" id="003111"&gt;frío&lt;/a&gt;/&lt;a class="decs" id="006508"&gt;calor&lt;/a&gt;, ingesta/&lt;a class="decs" id="029390"&gt;ayuno&lt;/a&gt;, tanto diariamente como en las diferentes estaciones. En conclusión, los problemas del &lt;a class="decs" id="013272"&gt;sueño&lt;/a&gt; son un factor condicionante de la evolución y &lt;a class="decs" id="012225"&gt;calidad de vida&lt;/a&gt; de los niños con &lt;a class="decs" id="056095"&gt;trastornos del neurodesarrollo&lt;/a&gt;, que debe ser tenido en cuenta en todos los casos y ocupar un lugar preferente tanto en la etapa diagnóstica como en la &lt;a class="decs" id="014190"&gt;terapéutica&lt;/a&gt;.
-  </str>
- </arr>
- <arr name="ab_en">
-  <str>
-   Adequate sleep is of critical need for a typical synaptic development and brain maturation, a poor quality sleep can have detrimental effects on children's' cognitive attention, memory, mood regulation, and behavior functions. Great concern has been voiced out regarding the high prevalence of poor sleep in children worldwide, the effects of poor sleep may be even more pronounced in children with neurodevelopmental disorders; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong association with daytime behavior problems. The purpose of this article is to provide an overview of the state of the science of sleep in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and metabolism. The circadian clock interacts with the diurnal and nocturnal environment that also drives transcription and metabolism during light/dark, sleep/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the sleep problems are a conditioning factor in the evolution and quality of life of children with neurodevelopmental disorders that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
+   ABSTRACT Digestive herbal teas in the form of monoherbal infusions or in mixtures are the most commonly used form of phytotherapy in Bahía Blanca (Argentina). This practice is based on family tradition reinforced by current trends reverting to the ingestion of natural products. The objective of this work was to analyze the botanical quality of the digestive mixtures sold in Bahía Blanca as fine cut mixtures (in tea bags) and thick cut mixtures (fragmented herbs). Samples of seven mixtures sold in the form of tea bags and four as bags of fragmented herbs were studied under stereoscopic and optical microscopes and micrographic studies were carried out following conventional protocols. Observed characteristics were compared with those in the reference bibliography for verified genuine monoherbs. In the studied products a total of 21 different species were found. There was total concordance between the species declared on the label and those identified in the samples in six of the mixtures in the form of tea bags and in only one of the bags of fragmented herbs. Adulterations were found in four of the samples analyzed (one in a tea bag and three in the fragmented mixtures). The labels on only two of the tea bag samples presented complete and correct information; in the remaining samples irregularities were found related to: the taxonomic identification of the species, the absence of a lot number, date of expiry, the plant parts used and proportions of the herbs etc. The findings underline the great importance of quality controls as a tool to protect the rights of phytotherapy consumers.
   </str>
  </arr>
  <arr name="mark_ab_en">
   <str>
-   Adequate &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; is of critical need for a typical synaptic development and &lt;a class="decs" id="001947"&gt;brain&lt;/a&gt; maturation, a poor quality &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; can have detrimental effects on children's' cognitive &lt;a class="decs" id="001294"&gt;attention&lt;/a&gt;, &lt;a class="decs" id="008738"&gt;memory&lt;/a&gt;, mood regulation, and &lt;a class="decs" id="001538"&gt;behavior&lt;/a&gt; functions. Great concern has been voiced out regarding the high &lt;a class="decs" id="028584"&gt;prevalence&lt;/a&gt; of poor &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; in children worldwide, the effects of poor &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; may be even more pronounced in children with &lt;a class="decs" id="056095"&gt;neurodevelopmental disorders&lt;/a&gt;; these children often have difficulties with falling and staying asleep and with night awakenings, this has a strong &lt;a class="decs" id="001252"&gt;association&lt;/a&gt; with daytime &lt;a class="decs" id="001538"&gt;behavior&lt;/a&gt; problems. The purpose of this article is to provide an overview of the &lt;a class="decs" id="036438"&gt;state&lt;/a&gt; of the &lt;a class="decs" id="012967"&gt;science&lt;/a&gt; of &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; in children with a neurodevelopmental disorder. In this context, it is important to take the circadian cycle into account, a genetically encoded clock that drives cellular rhythms of transcription, translation and &lt;a class="decs" id="008837"&gt;metabolism&lt;/a&gt;. The circadian clock interacts with the diurnal and nocturnal &lt;a class="decs" id="004858"&gt;environment&lt;/a&gt; that also drives transcription and &lt;a class="decs" id="008837"&gt;metabolism&lt;/a&gt; during &lt;a class="decs" id="008203"&gt;light&lt;/a&gt;/dark, &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt;/wake, hot/cold and feast/fast daily and seasonal cycles In conclusion, the &lt;a class="decs" id="013272"&gt;sleep&lt;/a&gt; problems are a conditioning factor in the evolution and &lt;a class="decs" id="012225"&gt;quality of life&lt;/a&gt; of children with &lt;a class="decs" id="056095"&gt;neurodevelopmental disorders&lt;/a&gt; that must be taken into account in all cases and occupy a preferential place in both the diagnostic and the therapeutic stages.
+   ABSTRACT Digestive herbal teas in the form of monoherbal infusions or in mixtures are the most commonly used form of &lt;a class="decs" id="008682"&gt;phytotherapy&lt;/a&gt; in Bahía Blanca (&lt;a class="decs" id="001121"&gt;Argentina&lt;/a&gt;). This practice is based on &lt;a class="decs" id="023905"&gt;family&lt;/a&gt; tradition reinforced by current trends reverting to the ingestion of natural products. The objective of this &lt;a class="decs" id="015335"&gt;work&lt;/a&gt; was to analyze the botanical quality of the digestive mixtures sold in Bahía Blanca as fine cut mixtures (in tea bags) and thick cut mixtures (fragmented herbs). Samples of seven mixtures sold in the form of tea bags and four as bags of fragmented herbs were studied under stereoscopic and optical microscopes and micrographic studies were carried out following conventional &lt;a class="decs" id="035170"&gt;protocols&lt;/a&gt;. Observed characteristics were compared with those in the reference &lt;a class="decs" id="029619"&gt;bibliography&lt;/a&gt; for verified genuine monoherbs. In the studied products a total of 21 different species were found. There was total concordance between the species declared on the label and those identified in the samples in six of the mixtures in the form of tea bags and in only one of the bags of fragmented herbs. Adulterations were found in four of the samples analyzed (one in a tea bag and three in the fragmented mixtures). The labels on only two of the tea bag samples presented complete and correct &lt;a class="decs" id="051835"&gt;information&lt;/a&gt;; in the remaining samples irregularities were found related to: the taxonomic identification of the species, the absence of a lot number, date of expiry, the plant parts used and proportions of the herbs etc. The findings underline the great importance of quality controls as a tool to protect the rights of &lt;a class="decs" id="008682"&gt;phytotherapy&lt;/a&gt; consumers.
   </str>
  </arr>
  <arr name="carpha_language">
   <str>
-   espanhol
+   ingles
   </str>
  </arr>
  <arr name="services">
@@ -226,49 +267,42 @@
   45.0
  </float>
  <str name="entry_date">
-  20190426
+  20190521
  </str>
  <str name="update_date">
   20190626
  </str>
  <arr name="pais_afiliacao">
   <str>
-   ^iVenezuela^eVenezuela^pVenezuela^fVenezuela
+   ^iArgentina^eArgentina^pArgentina^fArgentine
+  </str>
+ </arr>
+ <arr name="instituicao_pais_afiliacao">
+  <str>
+   Universidad Nacional del Sur+AR
   </str>
  </arr>
  <arr name="kw">
   <str>
-   Autism spectrum disorders
+   Botanical quality control
   </str>
   <str>
-   Biological rhythms
+   Digestive mixtures
   </str>
   <str>
-   Biorritmos
+   Medicinal plants
   </str>
   <str>
-   Ciclo circadiano
+   Morpho-anatomical characters
   </str>
   <str>
-   Circadian cycle
+   Pharmacobotanical analysis
   </str>
   <str>
-   Insomnia
-  </str>
-  <str>
-   Insomnio
-  </str>
-  <str>
-   Melatonin
-  </str>
-  <str>
-   Melatonina
-  </str>
-  <str>
-   Trastornos del espectro autista
+   Tisane
   </str>
  </arr>
  <long name="_version_">
-  1639025509516967936
+  1639025510814056448
  </long>
 </doc>

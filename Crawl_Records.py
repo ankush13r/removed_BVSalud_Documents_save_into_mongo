@@ -41,6 +41,9 @@ def make_base_url(argument):
         base_url = 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&sort=YEAR_DESC&format=abstract&filter[db][]=LILACS&filter[db][]=IBECS&q=&index=tw&'
         folder_to_save = './crawled/'
         data_name = "IBECS_LILACS"
+    else:
+        print("Error: Wrong argument.")
+        return False
 
 
     print("Data name: ",data_name)
@@ -81,7 +84,7 @@ def save_all_xml(data_name,base_url,folder_to_save,total_records, per_page):
     
     date = datetime.utcnow().strftime('%d%m%Y')
 
-    for i in range(5):
+    for i in range(2):
         file_name = f"{data_name}_{date}_pg_{i+1}.xml"
         destine = os.path.join(folder_to_save,file_name)
         print(i+1)
