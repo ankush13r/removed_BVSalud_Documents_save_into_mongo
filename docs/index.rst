@@ -1,19 +1,15 @@
-.. 'PlanTL bvsalud' documentation master file, created by
-   sphinx-quickstart on Wed Jul 17 11:41:23 2019.
+.. BvSalud PlanTL documentation master file, created by
+   sphinx-quickstart on Thu Jul 18 21:08:04 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to 'PlanTL bvsalud''s documentation!
-============================================
-.. toctree::
-   :maxdepth: 2
-
-   README
+Welcome to BvSalud PlanTL's documentation!
+==========================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
    :caption: Contents:
-   
+
    modules
 
 Indices and tables
