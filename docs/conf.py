@@ -44,7 +44,7 @@ release = '0.0.1'
 #MOCK_MODULES = ['pymongo']
 #for mod_name in MOCK_MODULES:
 #	sys.modules[mod_name] = mock.Mock()
-autodoc_mock_imports = ["pymongo","bs4"]
+autodoc_mock_imports = ["pymongo","bs4","BeautifulSoup"]
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
