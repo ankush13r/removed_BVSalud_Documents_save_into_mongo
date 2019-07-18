@@ -1,11 +1,12 @@
-2project\_PlanTL package
-========================
-# MEDDOCAN: Evaluation Script (CODALAB version)
 
-## Digital Object Identifier (DOI)
+README
+======
 
+Digital Object Identifier (DOI)
+-------------------------------
 
-## Introduction
+Introduction
+------------
 
 This script is the COBALAB version of the original evaluation script. It
 has been adapted to fit the requirements of the platform, but otherwise, 

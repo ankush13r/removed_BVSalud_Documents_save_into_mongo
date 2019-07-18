@@ -1,6 +1,5 @@
-
-# README
-
+README
+=============
 ## Digital Object Identifier (DOI)
 
 
@@ -14,6 +13,3 @@ It is distributed as apart of the Medical Document Anonymization
 (MEDDOCAN) task. It is based on the evaluation script from the i2b2 2014
 Cardiac Risk and Personal Health-care Information (PHI) tasks. It is
 intended to b
-
-fdfdshod
-dfdfd
