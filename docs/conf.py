@@ -86,9 +86,10 @@ pygments_style = None
 #
 #html_theme = 'classic'
 
-import rtcat_sphinx_theme
-html_theme = 'rtcat_sphinx_theme'
-html_theme_path = [rtcat_sphinx_theme.get_html_theme_path()]
+html_theme = 'neo_rtd_theme'
+import sphinx_theme
+html_theme_path = [sphinx_theme.get_html_theme_path()]
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.

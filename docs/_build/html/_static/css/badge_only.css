@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/**
+ * Wyrm: https://github.com/TYPO3-Documentation/t3SphinxThemeRtd/blob/master/sass/_theme_variables.sass
+ * Stanford colors: https://identity.stanford.edu/web-toolkit/color.html
+ * https://identity.stanford.edu/overview/color.html
+ */
 .fa:before {
   -webkit-font-smoothing: antialiased;
 }
@@ -110,7 +115,7 @@ ul.fas li .fa-large:before {
   z-index: 400;
 }
 .rst-versions a {
-  color: #0E6FD2;
+  color: #5091cd;
   text-decoration: none;
 }
 .rst-versions .rst-badge-small {
