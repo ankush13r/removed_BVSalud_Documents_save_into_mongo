@@ -87,7 +87,7 @@ pygments_style = None
 #html_theme = 'classic'
 
 import rtcat_sphinx_theme
-html_theme = 'classic'
+html_theme = 'rtcat_sphinx_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
