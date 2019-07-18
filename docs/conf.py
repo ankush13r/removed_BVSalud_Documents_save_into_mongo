@@ -47,8 +47,6 @@ release = '0.0.1'
 autodoc_mock_imports = ["pymongo","bs4","BeautifulSoup"]
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
-    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -89,8 +87,7 @@ pygments_style = None
 #html_theme = 'classic'
 
 import rtcat_sphinx_theme
-html_theme = 'rtcat_sphinx_theme'
-html_theme_path = [rtcat_sphinx_theme.get_html_theme_path()]
+html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
