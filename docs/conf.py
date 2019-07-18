@@ -88,7 +88,7 @@ pygments_style = None
 
 import rtcat_sphinx_theme
 html_theme = 'rtcat_sphinx_theme'
-
+html_theme_path = [rtcat_sphinx_theme.get_html_theme_path()]
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
