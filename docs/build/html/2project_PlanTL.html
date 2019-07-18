@@ -1,0 +1,517 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PlanTL package &#8212; &#39;PlanTL bvsalud&#39; 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plantl-package">
+<h1>PlanTL package<a class="headerlink" href="#plantl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-Crawl_Records">
+<span id="crawl-records-module"></span><h2>Crawl_Records module<a class="headerlink" href="#module-Crawl_Records" title="Permalink to this headline">¶</a></h2>
+<p>Program INFO</p>
+<ul>
+<li><p class="first"><strong>Requirement BeautifulSoup</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>linux:  $ sudo apt-get install python-bs4
+Macs:   $ sudo easy_install pip
+pip:    $ pip install beautifulSoup
+</pre></div>
+</div>
+</li>
+</ul>
+<dl class="function">
+<dt id="Crawl_Records.count_records">
+<code class="descclassname">Crawl_Records.</code><code class="descname">count_records</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#Crawl_Records.count_records" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>The method extract the total number of records from the xml downloading bye the url received as parameter.</em></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param url:</th><td class="field-body">A url for downloading documents in a single xml file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type url:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Number of total records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Int</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It’s better to pass a <em>url</em> which conteins just 1 to 5 documents and it will count quickly.
+Otherwise it may take more time, because of the file’s size.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crawl_Records.get_records">
+<code class="descclassname">Crawl_Records.</code><code class="descname">get_records</code><span class="sig-paren">(</span><em>doc_type</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Crawl_Records.get_records" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>The method works as main, because all other methods are called from here. 
+It just receives two argument, the first (doc_type) is requeued and must be the type of document (journal).
+But the other one (mode) is for if you just want to count records, not to download and save.</em></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param doc_type:</th><td class="field-body">The type of documents (Ex: ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type doc_type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param mode:</th><td class="field-body">If you just want to count records mode should be <strong>“count”</strong>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type mode:</th><td class="field-body">string (Ex: “count”).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Number of records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">Int</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crawl_Records.make_base_url">
+<code class="descclassname">Crawl_Records.</code><code class="descname">make_base_url</code><span class="sig-paren">(</span><em>doc_type</em><span class="sig-paren">)</span><a class="headerlink" href="#Crawl_Records.make_base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>With the type of Pesquisa articles it returns a base url, folder to save, and data name, depending of type received by it.</em></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param doc_type:</th><td class="field-body">Receives documents type (ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type doc_type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">data_name, base_url, folder_to_save</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">string, string, string</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crawl_Records.make_url">
+<code class="descclassname">Crawl_Records.</code><code class="descname">make_url</code><span class="sig-paren">(</span><em>base_url</em>, <em>start_record</em>, <em>per_page</em>, <em>page</em><span class="sig-paren">)</span><a class="headerlink" href="#Crawl_Records.make_url" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Method to make a url, joining the base_url, start position of records, number of documents per page and page number.
+All parameters are required.</em></p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param base_url:</th><td class="field-body">A base url from where you want to download all contents.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type base_url:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">param start_record:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Start position for records .Records will be start by this number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type start_record:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param per_page:</th><td class="field-body">Number of total records by a page.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type per_page:</th><td class="field-body">Int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param page:</th><td class="field-body">Number of the page.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type page:</th><td class="field-body">Int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">final_url</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crawl_Records.save_all_xml">
+<code class="descclassname">Crawl_Records.</code><code class="descname">save_all_xml</code><span class="sig-paren">(</span><em>data_name</em>, <em>base_url</em>, <em>folder_to_save</em>, <em>total_records</em>, <em>per_page</em><span class="sig-paren">)</span><a class="headerlink" href="#Crawl_Records.save_all_xml" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>This method download all *XML files</em> and save in a folder, the path of which is received by argument.*</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_name</strong> (<em>string</em>) – Journal’s name like (IBECS, LILACS, or IBECS_LILACS).</li>
+<li><strong>base_url</strong> (string (Ex: ‘<a class="reference external" href="http://pesquisa.bvsalud.org/portal/?output=xml&amp;lang=en">http://pesquisa.bvsalud.org/portal/?output=xml&amp;lang=en</a>’)) – A base url to make a new url with number of documents, start position and page number.</li>
+<li><strong>folder_to_save</strong> (<em>string</em><em> (</em><em>'./crawled/'</em><em>)</em>) – Path of a folder, where the all documents will be stored. If it doesn’t exist it will be created.</li>
+<li><strong>total_records</strong> (<em>Int</em>) – Number of all records.</li>
+<li><strong>per_page</strong> (<em>Int</em>) – Number of records by a page.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">True. It returns always true.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All records will be saved by the name created with data_name + date + file number + .xml./n
+(Ex: IBECS_LILACS_17072019_pg_1.xml)</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-parse_xml_new_and_update">
+<span id="parse-xml-new-and-update-module"></span><h2>parse_xml_new_and_update module<a class="headerlink" href="#module-parse_xml_new_and_update" title="Permalink to this headline">¶</a></h2>
+<p><strong>MongoDB</strong>:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">MongoDb must be running. Otherwise it will give you an error.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">MongoDB  is initialized just by calling the module <em>parse_xml_new_and_update</em>.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data base</th>
+<th class="head">Collection</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="5">bvc</td>
+<td>training_collection_All</td>
+</tr>
+<tr class="row-odd"><td>training_collection_None_Indexed_t1</td>
+</tr>
+<tr class="row-even"><td>training_collection_None_Indexed_t2</td>
+</tr>
+<tr class="row-odd"><td>training_collection_Update_info</td>
+</tr>
+<tr class="row-even"><td>errors_training</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="parse_xml_new_and_update.change_collections_name_mongo">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">change_collections_name_mongo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.change_collections_name_mongo" title="Permalink to this definition">¶</a></dt>
+<dd><p>It changes the name of a collaction if the target name is exist than it will delete that collaction.
+(Ex: vs.training_collection_None_Indexed_t2  -&gt; vs.training_collection_None_Indexed_t1).</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Nothing to return</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.document_compare">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">document_compare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.document_compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is just for compare all document none indexed, <em>DATA BASE time1 by time2 and time2 by time1</em>.
+New will be inserted into the main DataBase and others will be updated by <strong>id, mh, sh, alternat_id</strong>
+unless in time2 documents have <strong>mh</strong> as <strong>None</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It receive nothing as parameter and nethier return. It just compare two collaction none indexed of time1 and time2.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.download_document">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">download_document</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.download_document" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is for downloading a single <em>article document in **xml*</em> format*, by the <strong>id of article</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>string</em><em> (</em><em>Ex: biblio-986217</em><em>)</em>) – Article’s alternate id. If it’s a normal id than it will return the same.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">url, xml (xml is a article document downloaded by id)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string, xml</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.find_id_by_alternate_id">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">find_id_by_alternate_id</code><span class="sig-paren">(</span><em>alternate_id</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.find_id_by_alternate_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for obtained article’s <strong>id</strong> by <strong>alternate id</strong>. It finds a document by document’s <em>id</em> or <em>alternate_id</em>. 
+The logic of this method is use for find a <strong>id</strong> by <strong>alternate id</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>alternate_id</strong> (<em>string</em><em> (</em><em>Ex: biblio-986217</em><em>)</em>) – Article’s alternate id. If it’s a normal id than it will return the same.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Article’s id.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string (Ex: biblio-1001042)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.main">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">main</code><span class="sig-paren">(</span><em>arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method main is just for calling all other methods. It recives a argument, but not required. 
+If it recives the argument <strong>“first_time”</strong> than it will download all documents and parse those to save in the MongoDB.
+Otherwise it will just download to be comared with others already existing.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param argument:</th><td class="field-body">This a condition if the program is being excecuted for first time.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Nothing to return</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the program is being executed first time, you must pass a argument <strong>first_time</strong>. Otherwise it doesn’t need any.
+First time: <em>python parse_xml_new_and_update.py first_time</em>
+Otherwise: python parse_xml_new_and_update.py*</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.parse_file">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">parse_file</code><span class="sig-paren">(</span><em>path_to_file</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method parse a files and extract all documents one by one, 
+and after it converts <strong>each document</strong> by calling the function <strong>xml_to_dictionary</strong>.
+After <strong>all the documents</strong> one by one will be saved in the <strong>data base MongoDB</strong> as well all <strong>ERROR</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path_to_file</strong> (<em>string</em><em> (</em><em>Ex: ./crawled/IBECS_LILACS_17072019_pg_1.xml</em><em>)</em><em></em>) – The root of file to be parsed.</li>
+<li><strong>mode</strong> (<em>string</em>) – The mode is condition if it receives <strong>“compare”</strong> will saved into a collection time 2. 
+Otherwise in the collection normal, maybe time 1. By default it’s None.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing to return.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.process_dir_t1">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">process_dir_t1</code><span class="sig-paren">(</span><em>path_to_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.process_dir_t1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get all file from a folder. All files one by one will be passed to the method <strong>parse_file</strong> without any condition (None).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_to_dir</strong> – The root of the directory where all files <strong>xml</strong> format are saved.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">string (Ex: ./crawled/)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Nothing to return.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">You should take a look at the method <strong>parse file</strong> with <strong>mode “compare”</strong>. 
+it would help you to handle better this method.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.process_dir_t2">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">process_dir_t2</code><span class="sig-paren">(</span><em>path_to_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.process_dir_t2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get all file from a folder. All files one by one will be passed to the method <strong>parse_file</strong> with the condion <strong>“compare”</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_to_dir</strong> – The root of the directory where all files in <strong>xml</strong> format are saved.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">string (Ex: ./crawled_no_indexed/)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Nothing to return.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">You should take a look at the method <strong>parse file</strong> with <strong>mode “compare”</strong>. 
+it would help you to handle better this method.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.save_to_mongo_updated_info">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">save_to_mongo_updated_info</code><span class="sig-paren">(</span><em>id</em>, <em>type</em>, <em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.save_to_mongo_updated_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is for saving the data like _id, type, db and date, in MongoDB <em>data base: bvc</em> and collection*.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id</strong> (<em>string</em>) – Article document’s id.</li>
+<li><strong>type</strong> (<em>string</em><em> (</em><em>new</em><em> or </em><em>update</em><em>)</em>) – Type is new or update. It depends on article if it’s new or just being updated.</li>
+<li><strong>db</strong> (<em>sting</em>) – The name of article’s data base (LILACS or IBECS)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing to return</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The date will be saved automatically. It will be actual date obtained by <code class="docutils literal notranslate"><span class="pre">datetime.utcnow()</span></code>.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="parse_xml_new_and_update.xml_to_dictionary">
+<code class="descclassname">parse_xml_new_and_update.</code><code class="descname">xml_to_dictionary</code><span class="sig-paren">(</span><em>document_xml</em><span class="sig-paren">)</span><a class="headerlink" href="#parse_xml_new_and_update.xml_to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method converts a <strong>xml document</strong> to a <strong>dictionary (json) format</strong>. The method is just for article BVSalud <strong>LILACS</strong> or <strong>IBECS</strong>.
+difference_between_entry_update_date.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param document_xml:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">A <strong>single article document</strong> in the <strong>xml</strong> format.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">type document_xml:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">xml</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">A <strong>single article document</strong> in the <strong>dictionary (json)</strong> format.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body">dictionary/json</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">'PlanTL bvsalud'</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Ankush Rana.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/2project_PlanTL.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
