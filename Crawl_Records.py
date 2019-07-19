@@ -15,13 +15,12 @@ import os ,sys,shutil
 from datetime import datetime
     
 def make_base_url(doc_type):
-    """
-    *With the type of Pesquisa articles it returns a base url, folder to save, and data name, depending of type received by it.*
+    """*With the type of Pesquisa articles it returns a base url, folder to save, and data name, depending of type received by it.*
 
-        :param doc_type: Receives documents type (ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).
-        :type doc_type: string
-        :returns: data_name, base_url, folder_to_save
-        :rtype: string, string, string
+:param doc_type: Receives documents type (ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).
+:type doc_type: string
+:returns: data_name, base_url, folder_to_save
+:rtype: string, string, string
     """
 
     if doc_type == "ibecs":
@@ -55,19 +54,18 @@ def make_base_url(doc_type):
 
 
 def make_url(base_url,start_record, per_page,page):
-    """*Method to make a url, joining the base_url, start position of records, number of documents per page and page number.
-All parameters are required.*
+    """*Method to make a url, joining the base_url, start position of records, number of documents per page and page number. All parameters are required.*
 
-        :param base_url: A base url from where you want to download all contents.
-        :type base_url: string
-        :param start_record: Start position for records .Records will be start by this number.
-        :type start_record: Int
-        :param per_page: Number of total records by a page.
-        :type per_page: Int
-        :param page: Number of the page.
-        :type page: Int  
-        :returns: final_url
-        :rtype: string
+:param base_url: A base url from where you want to download all contents.
+:type base_url: string
+:param start_record: Start position for records .Records will be start by this number.
+:type start_record: Int
+:param per_page: Number of total records by a page.
+:type per_page: Int
+:param page: Number of the page.
+:type page: Int  
+:returns: final_url
+:rtype: string
 """
     final_url = base_url+f'from={start_record}&count={per_page}&page={page}'
     return final_url
@@ -77,16 +75,15 @@ All parameters are required.*
  #-----------------------------------------------------------------------#
 
 def count_records(url):
-    """
-    *The method extract the total number of records from the xml downloading bye the url received as parameter.*
+    """*The method extract the total number of records from the xml downloading bye the url received as parameter.*
         
-        :param url: A url for downloading documents in a single xml file.
-        :type url: string
-        :returns: Number of total records.
-        :rtype: Int
+:param url: A url for downloading documents in a single xml file.
+:type url: string
+:returns: Number of total records.
+:rtype: Int
 
-        .. note:: It's better to pass a *url* which conteins just 1 to 5 documents and it will count quickly.
-                Otherwise it may take more time, because of the file's size. 
+.. note:: It's better to pass a *url* which conteins just 1 to 5 documents and it will count quickly.
+        Otherwise it may take more time, because of the file's size. 
     """
     xml_content = urlopen(url)
     bsObj = BeautifulSoup(xml_content.read(),'lxml') 
@@ -97,21 +94,21 @@ def count_records(url):
 def save_all_xml(data_name,base_url,folder_to_save,total_records, per_page):
     """*This method download all *XML files* and save in a folder, the path of which is received by argument.*
     
-        :param data_name:  Journal's name like (IBECS, LILACS, or IBECS_LILACS).
-        :type data_name: string
-        :param base_url:  A base url to make a new url with number of documents, start position and page number.
-        :type base_url: string (Ex: 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en')
-        :param folder_to_save: Path of a folder, where the all documents will be stored. If it doesn't exist it will be created.
-        :type folder_to_save: string ('./crawled/')
-        :param total_records: Number of all records.
-        :type total_records: Int
-        :param per_page: Number of records by a page.
-        :type per_page: Int
-        :returns: True. It returns always true.
-        :rtype: Boolean
+:param data_name:  Journal's name like (IBECS, LILACS, or IBECS_LILACS).
+:param base_url:  A base url to make a new url with number of documents, start position and page number.
+:param folder_to_save: Path of a folder, where the all documents will be stored. If it doesn't exist it will be created.
+:param total_records: Number of all records.
+:param per_page: Number of records by a page.
+:type data_name: string
+:type base_url: string (Ex: 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en')
+:type folder_to_save: string ('./crawled/')
+:type total_records: Int
+:type per_page: Int
+:returns: True. It returns always true.
+:rtype: Boolean
 
-        .. note::   All records will be saved by the name created with data_name + date + file number + .xml./n
-                    (Ex: IBECS_LILACS_17072019_pg_1.xml) 
+.. note::   All records will be saved by the name created with data_name + date + file number + .xml./n
+            (Ex: IBECS_LILACS_17072019_pg_1.xml) 
     """
 
     print("----------Saving Records------------")
@@ -140,12 +137,12 @@ def get_records(doc_type, mode = None):
 It just receives two argument, the first (doc_type) is requeued and must be the type of document (journal).
 But the other one (mode) is for if you just want to count records, not to download and save.*
 
-        :param doc_type: The type of documents (Ex: ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).
-        :type doc_type: string
-        :param mode: If you just want to count records mode should be **"count"**.
-        :type mode: string (Ex: "count").
-        :returns: Number of records.
-        :rtype: Int  
+:param doc_type: The type of documents (Ex: ibecs, lilacs, none_indexed_ibecs, none_indexed_lilacs, all, all_none_indexed).
+:type doc_type: string
+:param mode: If you just want to count records mode should be **"count"**.
+:type mode: string (Ex: "count").
+:returns: Number of records.
+:rtype: Int  
     """
 
     data_name,base_url,folder_to_save = make_base_url(doc_type)

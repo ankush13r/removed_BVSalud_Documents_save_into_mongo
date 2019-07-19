@@ -43,13 +43,13 @@ errors = db.errors_training
 def save_to_mongo_updated_info(id,type,db):
     """This method is for saving the data like _id, type, db and date, in MongoDB *data base: bvc* and collection*. 
 
-    :param id: Article document's id.
-    :type id: string
-    :param type: Type is new or update. It depends on article if it's new or just being updated.
-    :type type: string (new or update)
-    :param db: The name of article's data base (LILACS or IBECS)
-    :type db: sting
-    :returns: Nothing to return
+:param id: Article document's id.
+:type id: string
+:param type: Type is new or update. It depends on article if it's new or just being updated.
+:type type: string (new or update)
+:param db: The name of article's data base (LILACS or IBECS)
+:type db: sting
+:returns: Nothing to return
 
     .. note:: The date will be saved automatically. It will be actual date obtained by ``datetime.utcnow()``.
 """
@@ -60,10 +60,10 @@ def save_to_mongo_updated_info(id,type,db):
 def download_document(id):
     """This method is for downloading a single *article document in **xml** format*, by the **id of article**.
 
-    :param id: Article's alternate id. If it's a normal id than it will return the same. 
-    :type id: string (Ex: biblio-986217)
-    :returns: url, xml (xml is a article document downloaded by id)
-    :rtype: string, xml
+:param id: Article's alternate id. If it's a normal id than it will return the same. 
+:type id: string (Ex: biblio-986217)
+:returns: url, xml (xml is a article document downloaded by id)
+:rtype: string, xml
 """
     base_url = 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&from=&sort=&format=&count=&fb=&page=1&q=id%3A'
     url = base_url+id
@@ -76,10 +76,10 @@ def find_id_by_alternate_id(alternate_id):
     """Method for obtained article's **id** by **alternate id**. It finds a document by document's *id* or *alternate_id*. 
     The logic of this method is use for find a **id** by **alternate id**.
 
-    :param alternate_id: Article's alternate id. If it's a normal id than it will return the same. 
-    :type alternate_id: string (Ex: biblio-986217)
-    :returns: Article's id.
-    :rtype: string (Ex: biblio-1001042)
+:param alternate_id: Article's alternate id. If it's a normal id than it will return the same. 
+:type alternate_id: string (Ex: biblio-986217)
+:returns: Article's id.
+:rtype: string (Ex: biblio-1001042)
 """
 
     base_url = 'http://pesquisa.bvsalud.org/portal/resource/en/'
@@ -96,11 +96,11 @@ def xml_to_dictionary(document_xml):
     """The method converts a **xml document** to a **dictionary (json) format**. The method is just for article BVSalud **LILACS** or **IBECS**.
 difference_between_entry_update_date.
 
-    :param document_xml: A **single article document** in the **xml** format. 
-    :type document_xml: xml
-    :returns: A **single article document** in the **dictionary (json)** format.
-    :rtype: dictionary/json
-    """
+:param document_xml: A **single article document** in the **xml** format. 
+:type document_xml: xml
+:returns: A **single article document** in the **dictionary (json)** format.
+:rtype: dictionary/json
+"""
     document_dict = dict()
     document_values = ['id','type','ur','au','afiliacao_autor','ti_es','ti_pt',
                        'ti_en','ti','fo','ta','is','la','cp','da','ab_pt','ab_en','ab_es','ab',
@@ -166,12 +166,12 @@ def parse_file(path_to_file,mode=None):
     and after it converts **each document** by calling the function **xml_to_dictionary**.
     After **all the documents** one by one will be saved in the **data base MongoDB** as well all **ERROR**.
 
-    :param path_to_file: The root of file to be parsed. 
-    :type path_to_file: string (Ex: ./crawled/IBECS_LILACS_17072019_pg_1.xml).
-    :param mode: The mode is condition if it receives **"compare"** will saved into a collection time 2. 
-                Otherwise in the collection normal, maybe time 1. By default it's None.
-    :type mode: string
-    :returns: Nothing to return.
+:param path_to_file: The root of file to be parsed. 
+:type path_to_file: string (Ex: ./crawled/IBECS_LILACS_17072019_pg_1.xml).
+:param mode: The mode is condition if it receives **"compare"** will saved into a collection time 2. 
+            Otherwise in the collection normal, maybe time 1. By default it's None.
+:type mode: string
+:returns: Nothing to return.
 
 """
     try:
@@ -209,9 +209,9 @@ def document_compare():
     """This method is just for compare all document none indexed, *DATA BASE time1 by time2 and time2 by time1*.
     New will be inserted into the main DataBase and others will be updated by **id, mh, sh, alternat_id**
     unless in time2 documents have **mh** as **None** 
-    
-    .. note:: It receive nothing as parameter and nethier return. It just compare two collaction none indexed of time1 and time2.
-    """
+
+.. note:: It receive nothing as parameter and nethier return. It just compare two collaction none indexed of time1 and time2.
+"""
 
     all_ids_cursor_t2 =  collection_None_Indexed_t2.find({},{"_id":1})
     all_ids_t2 = []
@@ -287,13 +287,14 @@ def document_compare():
 def change_collections_name_mongo(old_name, new_name):
     """It changes the name of a collaction if the target name is exist than it will delete that collaction.
 (Ex: vs.training_collection_old  -> vs.training_collection_new). 
-    :param old_name: The collection's name which will be changed by a new one.
-    :type: strint
-    :param new_name: A new name for the collection. 
-    :returns: Nothing to return     
-    
-    .. warning:: Please do not pass new_name same as old_name, those must be diffrent.
-    """
+ 
+:param old_name: The collection's name which will be changed by a new one.
+:type: strint
+:param new_name: A new name for the collection. 
+:returns: Nothing to return     
+
+.. warning:: Please do not pass new_name same as old_name, those must be diffrent.
+"""
     try:
         client.admin.command("renameCollection", old_name, to= new_name,dropTarget=True)
     except:
@@ -302,12 +303,12 @@ def change_collections_name_mongo(old_name, new_name):
 def process_dir_t2(path_to_dir):
     """Method to get all file from a folder. All files one by one will be passed to the method **parse_file** with the condion **"compare"**
     
-    :param path_to_dir: The root of the directory where all files in **xml** format are saved. 
-    :type: string (Ex: ./crawled_no_indexed/)
-    :returns: Nothing to return.
+:param path_to_dir: The root of the directory where all files in **xml** format are saved. 
+:type: string (Ex: ./crawled_no_indexed/)
+:returns: Nothing to return.
 
-    .. seealso:: You should take a look at the method **parse file** with **mode "compare"**. 
-                it would help you to handle better this method. 
+.. seealso:: You should take a look at the method **parse file** with **mode "compare"**. 
+            it would help you to handle better this method. 
     """  
 
     files = glob.glob(path_to_dir+'*.xml')
@@ -318,12 +319,12 @@ def process_dir_t2(path_to_dir):
 def process_dir_t1(path_to_dir):
     """Method to get all file from a folder. All files one by one will be passed to the method **parse_file** without any condition (None).
     
-    :param path_to_dir: The root of the directory where all files **xml** format are saved. 
-    :type: string (Ex: ./crawled/)
-    :returns: Nothing to return.
+:param path_to_dir: The root of the directory where all files **xml** format are saved. 
+:type: string (Ex: ./crawled/)
+:returns: Nothing to return.
 
-    .. seealso:: You should take a look at the method **parse file** with **mode "compare"**. 
-                it would help you to handle better this method. 
+.. seealso:: You should take a look at the method **parse file** with **mode "compare"**. 
+         it would help you to handle better this method. 
     """     
     print("..........")
     files = glob.glob(path_to_dir+'*.xml')
@@ -336,13 +337,13 @@ def main(arguments):
 If it recives the argument **"first_time"** than it will download all documents and parse those to save in the MongoDB.
 Otherwise it will just download to be comared with others already existing.
 
-    :param argument: This a condition if the program is being excecuted for first time.
-    :type: string
-    :returns: Nothing to return
+:param argument: This a condition if the program is being excecuted for first time.
+:type: string
+:returns: Nothing to return
 
-    .. note:: If the program is being executed first time, you must pass a argument **first_time**. Otherwise it doesn't need any.
-            First time: *python parse_xml_new_and_update.py first_time*
-            Otherwise: python parse_xml_new_and_update.py*
+.. note:: If the program is being executed first time, you must pass a argument **first_time**. Otherwise it doesn't need any.
+    First time: *python parse_xml_new_and_update.py first_time*
+    Otherwise: python parse_xml_new_and_update.py*
 
 """
     

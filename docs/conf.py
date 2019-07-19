@@ -47,6 +47,7 @@ release = '0.0.1'
 autodoc_mock_imports = ["pymongo","bs4","BeautifulSoup"]
 extensions = [
     'sphinx.ext.autodoc',
+    'm2r',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

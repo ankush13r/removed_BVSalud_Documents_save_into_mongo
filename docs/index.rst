@@ -6,11 +6,19 @@
 Welcome to BvSalud PlanTL's documentation!
 ==========================================
 
+README
+----------------------
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+   :maxdepth: 1
 
-   modules
+   README
+
+Content
+---------------------
+.. toctree::
+   :maxdepth: 4
+
+   BVSalud_Documents_save_into_mongo
 
 Indices and tables
 ==================

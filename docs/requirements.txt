@@ -1,1 +1,1 @@
-sphinx_theme
+m2r
