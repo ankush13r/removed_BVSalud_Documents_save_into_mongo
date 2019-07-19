@@ -107,8 +107,6 @@ difference_between_entry_update_date.
                        'entry_date','_version_','ct','mh','sh','cc','mark_ab_es','mark_ab_pt','mark_ab_en',
                        'db','alternate_id','update_date']
 
-    file = open("xml_formated","w")
-    file.write(document_xml.prettify())
     for code in document_values:
         try:
             value =document_xml.find(attrs= {'name':code}) # Find the value by code. If it doesn't exit than returns none
@@ -286,14 +284,18 @@ def document_compare():
                                             detail_error=url,
                                             exception_str=str(e)))  
                           
-def change_collections_name_mongo():
+def change_collections_name_mongo(old_name, new_name):
     """It changes the name of a collaction if the target name is exist than it will delete that collaction.
-(Ex: vs.training_collection_None_Indexed_t2  -> vs.training_collection_None_Indexed_t1). 
-
+(Ex: vs.training_collection_old  -> vs.training_collection_new). 
+    :param old_name: The collection's name which will be changed by a new one.
+    :type: strint
+    :param new_name: A new name for the collection. 
     :returns: Nothing to return     
+    
+    .. warning:: Please do not pass new_name same as old_name, those must be diffrent.
     """
     try:
-        client.admin.command("renameCollection", "bvs.training_collection_None_Indexed_t2", to= "bvs.training_collection_None_Indexed_t1",dropTarget=True)
+        client.admin.command("renameCollection", old_name, to= new_name,dropTarget=True)
     except:
         pass
     
@@ -343,12 +345,12 @@ Otherwise it will just download to be comared with others already existing.
             Otherwise: python parse_xml_new_and_update.py*
 
 """
-    num_all_records = Crawl_Records.get_records("all", "count")
-    num_none_indexed =  Crawl_Records.get_records("all_none_indexed", "count")
-
+    
     if len(arguments) == 2:
-        if arguments[1] == 'first_time':
+        if arguments[1] in ['first_time', "all"]:
             Crawl_Records.get_records("all")
+            change_collections_name_mongo("bvs.training_collection_All","bvs.training_collection_All_Old")
+            change_collections_name_mongo("bvs.training_collection_None_Indexed_t1","bvs.training_collection_None_Indexed_t1_old")
             process_dir_t1("./crawled/")
         else:
             print("\nError: Wrong argument.\n")
@@ -357,7 +359,7 @@ Otherwise it will just download to be comared with others already existing.
     elif len(arguments) == 1:
         Crawl_Records.get_records("none_indexed_ibecs")
         Crawl_Records.get_records("none_indexed_lilacs")
-        change_collections_name_mongo()
+        change_collections_name_mongo("bvs.training_collection_None_Indexed_t2","bvs.training_collection_None_Indexed_t1")
         process_dir_t2('./crawled_no_indexed/')
         document_compare()
 

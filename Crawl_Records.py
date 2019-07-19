@@ -124,7 +124,9 @@ def save_all_xml(data_name,base_url,folder_to_save,total_records, per_page):
 
     date = datetime.utcnow().strftime('%d%m%Y')
     num_pages = math.ceil(total_records/per_page)
-    for i in range(20):
+    print("Total records: ", total_records)
+    print("Total pages: ", num_pages)
+    for i in range(num_pages):
         file_name = f"{data_name}_{date}_pg_{i+1}.xml"
         destine = os.path.join(folder_to_save,file_name)
         print(i+1)
