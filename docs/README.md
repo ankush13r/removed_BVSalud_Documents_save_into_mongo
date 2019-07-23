@@ -63,9 +63,9 @@ This is for all next rounds. you must run it without any argument. Make sure it'
     
 **Result (MongoDB):**
 - **bvs** *(DB)*:
-    - **training_collection_All** *(Collection)*:  This collection will contain all articles, ***new arrived none indexed*** and update ***all none indexed to indexed***.
-    - **training_collection_None_Indexed_t1** *(Collection)*:  This collection is a copy of ***training_collection_None_Indexed_t2***, those that have been indexed between all this time.
-    - **training_collection_None_Indexed_t2** *(Collection)*:  This collection will contain ***all new none indexed***.    
+    - **training_collection_All** *(Collection)*:  This collection will contain all articles, *new arrived none indexed* and update *all none indexed to indexed*.
+    - **training_collection_None_Indexed_t1** *(Collection)*:  This collection is a copy of *training_collection_None_Indexed_t2*, those that have been indexed between all this time.
+    - **training_collection_None_Indexed_t2** *(Collection)*:  This collection will contain *all new none indexed*.    
     -----------------------------------------------------------------
 
     - **old_training_collection_All** *(Collection)*:  This is the copy of old collection, *training_collection_All.*
