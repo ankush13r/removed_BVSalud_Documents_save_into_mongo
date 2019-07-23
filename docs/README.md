@@ -42,8 +42,9 @@ bash: $ python parse_xml_new_and_update.py
 
 ```
 This is for second round and you must run it without any argument. Make sure it's not the first time. In this round program will compare all none indexed article if they have been indexed or there are any new article. 
-    It will save all new article directly and others that have been indexed update, in the collection.
-    
+It will save all new article directly and others that have been indexed update, in the collection.
+
+
 **Result (MongoDB):**
 - **bvs** *(DB)*:
     - **training_collection_All** *(Collection)*:  This collection will contain all articles, new arrived and old.
