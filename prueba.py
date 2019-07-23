@@ -1,0 +1,3 @@
+import parse_xml_new_and_update
+
+parse_xml_new_and_update.find_new_documents()

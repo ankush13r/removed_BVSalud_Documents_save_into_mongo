@@ -28,7 +28,7 @@ import json
 import glob
 from io import open
 import re
-import os
+import os, shutil
 import sys, time
 import Crawl_Records
 
@@ -52,6 +52,7 @@ def save_to_mongo_updated_info(id,type,db):
 :returns: Nothing to return
 
     .. note:: The date will be saved automatically. It will be actual date obtained by ``datetime.utcnow()``.
+
 """
     date = datetime.utcnow()
     dictionary = dict({'_id':id,'type':type,'db':db,'parsing_date':date})     
@@ -60,15 +61,15 @@ def save_to_mongo_updated_info(id,type,db):
 def download_document(id):
     """This method is for downloading a single *article document in **xml** format*, by the **id of article**.
 
-:param id: Article's alternate id. If it's a normal id than it will return the same. 
-:type id: string (Ex: biblio-986217)
+:param id: Article's alternate id. If it's a normal id than it will return the same. (Ex: biblio-986217). 
+:type id: string
 :returns: url, xml (xml is a article document downloaded by id)
 :rtype: string, xml
 """
     base_url = 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&from=&sort=&format=&count=&fb=&page=1&q=id%3A'
     url = base_url+id
     document = urlopen(url)
-    time.sleep(5)
+    time.sleep(10)
     return url,document
 
 
@@ -76,8 +77,8 @@ def find_id_by_alternate_id(alternate_id):
     """Method for obtained article's **id** by **alternate id**. It finds a document by document's *id* or *alternate_id*. 
     The logic of this method is use for find a **id** by **alternate id**.
 
-:param alternate_id: Article's alternate id. If it's a normal id than it will return the same. 
-:type alternate_id: string (Ex: biblio-986217)
+:param alternate_id: Article's alternate id. If it's a normal id than it will return the same (Ex: biblio-986217). 
+:type alternate_id: string
 :returns: Article's id.
 :rtype: string (Ex: biblio-1001042)
 """
@@ -332,6 +333,42 @@ def process_dir_t1(path_to_dir):
         print("file",file)
         parse_file(file)
 
+def find_new_documents():
+    print("Finding all missing records:")
+    num_records_in_mongo = collection_all.count()
+    num_records_in_web = Crawl_Records.get_records("all","count")
+    data_name,base_url,folder_to_save = Crawl_Records.make_base_url("all")
+    folder_to_save = './crawled_lost_found/'
+    date = datetime.utcnow().strftime('%d%m%Y')
+    num_missing_records = num_records_in_web - num_records_in_mongo
+    print("Total records: ",num_records_in_web,"\nRecord in MondoDB: ",num_records_in_mongo,)
+    print("Missing record: ",num_missing_records)
+    num_found_records = 0
+    num_missing_records = 10
+    i = 1
+    while num_found_records < num_missing_records:
+        print(i)
+        url = Crawl_Records.make_url(base_url,i,1,i)
+        xml_content = Crawl_Records.urlopen(url)
+        bsObj = BeautifulSoup(xml_content,features='lxml')
+        document_xml = bsObj.find("doc")
+        id =document_xml.find(attrs= {'name':'id'}).text
+        exist = collection_all.find_one({'_id':id})
+        if not exist:
+            document_dict = xml_to_dictionary(document_xml)
+            num_found_records += 1;
+            print("Found: ",num_found_records,"id:",document_dict['_id'])
+            try:
+                collection_all.insert_one(document_dict)
+                save_to_mongo_updated_info(document_dict['_id'],'new_indexed',document_dict['db'])
+            except Exception as e:
+                    errors.insert_one(dict(date_time=datetime.utcnow(),
+                                            doc_id=document_dict['_id'],
+                                            type_error='Insert new while finding lost documents ',
+                                            detail_error=url,
+                                            exception_str=str(e)))  
+        i += 1       
+    
 def main(arguments):
     """The method main is just for calling all other methods. It recives a argument, but not required. 
 If it recives the argument **"first_time"** than it will download all documents and parse those to save in the MongoDB.
@@ -346,17 +383,19 @@ Otherwise it will just download to be comared with others already existing.
     Otherwise: python parse_xml_new_and_update.py*
 
 """
-    
+
     if len(arguments) == 2:
         if arguments[1] in ['first_time', "all"]:
             Crawl_Records.get_records("all")
-            change_collections_name_mongo("bvs.training_collection_All","bvs.training_collection_All_Old")
-            change_collections_name_mongo("bvs.training_collection_None_Indexed_t1","bvs.training_collection_None_Indexed_t1_old")
+            change_collections_name_mongo("bvs.training_collection_None_Indexed_2","bvs.old_training_collection_None_Indexed_t2")
+            change_collections_name_mongo("bvs.training_collection_All","bvs.old_training_collection_All")
+            change_collections_name_mongo("bvs.training_collection_None_Indexed_t1","bvs.old_training_collection_None_Indexed_t1")
             process_dir_t1("./crawled/")
         else:
-            print("\nError: Wrong argument.\n")
-            print("\tfirst_time: If you are doing it first time.")
-            print("\t            Otherwise don't have to pass any argument.")
+            print("\n\tError:\tWrong argument.")
+            print("\n\tfirst_time:\tIf you are doing it first time.")
+            print("\n\t\t\tOtherwise don't have to pass any argument.")
+            print("\n\tall:\tIf you want download all again.")
     elif len(arguments) == 1:
         Crawl_Records.get_records("none_indexed_ibecs")
         Crawl_Records.get_records("none_indexed_lilacs")

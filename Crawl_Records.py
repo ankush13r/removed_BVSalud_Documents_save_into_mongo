@@ -1,12 +1,3 @@
-""" Program INFO
-
-    - **Requirement BeautifulSoup**::
-
-            linux:  $ sudo apt-get install python-bs4
-            Macs:   $ sudo easy_install pip
-            pip:    $ pip install beautifulSoup
-"""
-
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, urlretrieve
 import time
@@ -75,16 +66,24 @@ def make_url(base_url,start_record, per_page,page):
  #-----------------------------------------------------------------------#
 
 def count_records(url):
-    """*The method extract the total number of records from the xml downloading bye the url received as parameter.*
+    """*The method extract total number of records from the xml downloading with the url received.*
         
-:param url: A url for downloading documents in a single xml file.
+:param url: A url for downloading documents in a xml format file.
 :type url: string
 :returns: Number of total records.
 :rtype: Int
 
 .. note:: It's better to pass a *url* which conteins just 1 to 5 documents and it will count quickly.
         Otherwise it may take more time, because of the file's size. 
-    """
+
+- Example:
+    .. code-block:: python
+            
+        >>> count_records('http://pesquisa.bvsalud.org/portal/?output=xml&lang=pt&from=0&sort=&format=summary&count=5&fb=&page=1&filter[db][]=LILACS&filter[db][]=IBECS&q=&index=tw')
+        1032452
+"""
+
+
     xml_content = urlopen(url)
     bsObj = BeautifulSoup(xml_content.read(),'lxml') 
     xml_data = bsObj.find(attrs = {'name' :'response'})
@@ -129,7 +128,7 @@ def save_all_xml(data_name,base_url,folder_to_save,total_records, per_page):
         print(i+1)
         url = make_url(base_url,(500*i)+1,per_page,i+1)
         urlretrieve(url,destine)
-        time.sleep(20)
+        time.sleep(30)
     return True
 
 def get_records(doc_type, mode = None):
