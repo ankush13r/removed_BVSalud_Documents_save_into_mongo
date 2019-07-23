@@ -12,7 +12,14 @@ def make_base_url(doc_type):
 :type doc_type: string
 :returns: data_name, base_url, folder_to_save
 :rtype: string, string, string
-    """
+
+- Example:
+    .. code-block:: python
+        >>> Crawl_Records.make_base_url("all")
+        ('IBECS_LILACS', 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&sort=YEAR_DESC&format=abstract&filter[db][]=LILACS&filter[db][]=IBECS&q=&index=tw&', './crawled/')
+"""
+
+
 
     if doc_type == "ibecs":
         base_url = 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&sort=YEAR_DESC&format=abstract&filter%5Bdb%5D%5B%5D=IBECS&q=&index=tw&'
