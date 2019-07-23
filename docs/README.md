@@ -71,7 +71,7 @@ Otherwise, you don't have to pass it any argument.
 ![BvSalud](data/BvSalud.png)
 
 
-For more information click [cl](https://bvsalud-documents-save-into-mongo.readthedocs.io/en/latest/BVSalud_Documents_save_into_mongo.html#module-Crawl_Records)
+For more information [click here](https://bvsalud-documents-save-into-mongo.readthedocs.io/en/latest/BVSalud_Documents_save_into_mongo.html#module-Crawl_Records)
 
 
 
