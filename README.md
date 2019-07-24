@@ -1,7 +1,7 @@
 # BvSalud PlanTL
 
 ## INTRODCTION
-BvSalud is a program that download all articles from [bvsalud](http://pesquisa.bvsalud.org/portal/), LILACS and IBECS and save into the MongoDB. As you will have noticed that they have mililons of article, so downloading all articles always is waste of time, when can just download those don't exist in your DATA BASE. 
+BvSalud PlanTL is the project to download all articles from [bvsalud](http://pesquisa.bvsalud.org/portal/), LILACS and IBECS and save into the MongoDB. As you will have noticed that they have mililons of article, so downloading all articles always is waste of time, when can just download those don't exist in your DATA BASE. 
 
 ### REQUERIMENT
 

@@ -15,6 +15,7 @@ def make_base_url(doc_type):
 
 - Example:
     .. code-block:: python
+    
         >>> Crawl_Records.make_base_url("all")
         ('IBECS_LILACS', 'http://pesquisa.bvsalud.org/portal/?output=xml&lang=en&sort=YEAR_DESC&format=abstract&filter[db][]=LILACS&filter[db][]=IBECS&q=&index=tw&', './crawled/')
 """
@@ -160,7 +161,7 @@ But the other one (mode) is for if you just want to count records, not to downlo
     return total_records    
 
 
-
+https://www.google.com/
 """
 def print_arguments_error():
     print()
